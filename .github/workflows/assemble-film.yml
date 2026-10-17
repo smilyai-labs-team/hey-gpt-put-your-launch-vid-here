@@ -1,0 +1,34 @@
+name: Assemble Orion T3 Flash launch film
+on:
+  push:
+    paths:
+      - 'film.parts/**'
+      - '.github/workflows/assemble-film.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-film:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out official production
+        uses: actions/checkout@v4
+      - name: Assemble launch MP4 and verify checksum
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat film.parts/Orion_T3_Flash_Official_Launch_1080p.mp4.part* > Orion_T3_Flash_Official_Launch_1080p.mp4
+          echo 'c9b0f7e1e59da5c3502902547bf3aa727a25e66bb074ae154dd63fce7f3ad459  Orion_T3_Flash_Official_Launch_1080p.mp4' | sha256sum -c -
+          ls -lh Orion_T3_Flash_Official_Launch_1080p.mp4
+      - name: Publish playable official MP4 in repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add Orion_T3_Flash_Official_Launch_1080p.mp4
+          if git diff --cached --quiet; then echo 'Film already published'; exit 0; fi
+          git commit -m 'Publish verified Orion T3 Flash 1080p launch film'
+          git push origin HEAD:main
