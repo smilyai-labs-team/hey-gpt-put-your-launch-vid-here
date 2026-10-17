@@ -1,33 +1,50 @@
-# Orion T3 Flash — Official Launch Film 🎬
+# Orion T3 Flash — Official Launch Film 🚀
 
-**By SmilyAI Labs**  
-**Try Orion:** https://orion.smilyai.org
+![Orion T3 Flash official logo](assets/orion-logo.webp)
 
-## Launch film
+## 🎬 Watch the complete launch film
 
-Production status: **rendering / publication pending**.
+### [▶ Orion T3 Flash — Official Launch Film (Full HD MP4)](Orion_T3_Flash_Official_Launch_1080p.mp4)
 
-The complete film is being produced using the supplied official Orion T3 Flash logo and the 5:27.648 music track. The target video format is **MP4 / H.264 / 1920 × 1080 / 30 fps / AAC audio**.
+**Direct video file:** [Orion_T3_Flash_Official_Launch_1080p.mp4](https://github.com/smilyai-labs-team/hey-gpt-put-your-launch-vid-here/blob/main/Orion_T3_Flash_Official_Launch_1080p.mp4)
 
-> Important: This README is not the finished MP4. A video will only be marked uploaded when the actual binary is available in this repository or its Releases.
+The film is **published and verified in this repository**. Its Git blob hash was checked against the rendered source file. The [automated build passed](https://github.com/smilyai-labs-team/hey-gpt-put-your-launch-vid-here/actions/runs/38997959998).
 
-## Verified product information
+| Specification | Exported film |
+|---|---|
+| Running time | 5:27.658 (complete original song; no intentional cuts) |
+| Resolution | 1920 × 1080 |
+| Frame rate | 30 fps |
+| Video | H.264 / MP4 |
+| Audio | AAC |
+| Format | 16:9 landscape |
+| File size | 9.9 MB (web-friendly 1080p edition) |
 
-- Designed for fast responses; actual response speed varies with server load.
-- 262K-token standard context window.
-- Optional context extension to 1M tokens on request by emailing the team (using YaRN).
-- Accepts text and images as input; returns text only.
+This repository carries the web-friendly encoding; a larger higher-quality master and the editable production ZIP were also delivered in the originating ChatGPT conversation.
+
+### Try Orion
+
+**🌐 https://orion.smilyai.org**
+
+### Confirmed product details
+
+- Built for fast responses; actual speed varies with server load.
+- Standard context window: **262K tokens**.
+- Optional **1M-token** context window, available on request by emailing the team (using YaRN).
+- **Text and image input; text output only.**
 - General questions and coding assistance.
-- **Instant** default effort mode; **Low** alternative mode.
-- Free to use **through January 1, 2027**.
-- Proprietary model; no weights or model internals are published here.
+- **Instant** (default) and **Low** effort modes.
+- **Free to use through January 1, 2027.**
+- Orion T3 Flash is proprietary; the production script here does not include model code or weights.
 
-## Production notes
+### Production source and integrity
 
-The video uses original, generated motion-graphics compositions and clearly labelled **illustrative user-interface demonstrations**. UI concepts are not presented as live recordings or verified screenshots.
+- [Reproducible film renderer](production/render.py)
+- [Scene and technical plan](PRODUCTION_PLAN.md)
+- [Film reconstruction workflow](.github/workflows/assemble-film.yml)
+- [Verified assembly information](PUBLISHING.md)
+- [Original logo](assets/orion-logo.webp)
 
-Audio and logo originate from the materials supplied to the production; rights to publish and reuse the music should be confirmed by its owner before public distribution.
+All UI examples in the film are clearly labelled illustrative concepts, not recordings of the live product. The audio was supplied by the project owner; they should confirm distribution rights.
 
-## Repository owner
-
-This repository is under **smilyai-labs-team**, not the other connected account.
+**MP4 SHA-256:** `c9b0f7e1e59da5c3502902547bf3aa727a25e66bb074ae154dd63fce7f3ad459`
